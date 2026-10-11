@@ -1,0 +1,57 @@
+# Runs the job hunter on GitHub's computers, so it works while your laptop is
+# off. Email details come from the repository's Secrets (Settings -> Secrets
+# and variables -> Actions) - the same Gmail account House Hunter uses.
+
+name: Job hunter
+
+on:
+  schedule:
+    # 07:10, 12:10 and 17:10 UTC (an hour later in UK summer time)
+    - cron: "10 7,12,17 * * *"
+  workflow_dispatch: # adds a "Run workflow" button for testing
+
+# Never run two at once (they'd both email the same new jobs).
+concurrency:
+  group: job-hunter
+  cancel-in-progress: false
+
+permissions:
+  contents: write # lets it save what it has seen and sent
+
+jobs:
+  hunt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      EMAIL_TO: ${{ secrets.EMAIL_TO }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Find jobs and prepare applications
+        run: python -m jobhunter run
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          REED_API_KEY: ${{ secrets.REED_API_KEY }}
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+
+      - name: Email new jobs
+        run: python -m jobhunter notify
+
+      - name: Remember what's been found and sent
+        if: always()
+        run: |
+          git config user.name "job-hunter"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data applications
+          git diff --cached --quiet || git commit -m "Update seen jobs"
+          git pull --rebase -q && git push

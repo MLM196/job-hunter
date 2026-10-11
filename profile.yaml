@@ -1,0 +1,94 @@
+# Everything the bot is allowed to say about you. It rewords and reorders
+# these facts for each job but never invents new ones, so keep this accurate.
+#
+# Anything still containing "TODO" stops CVs and cover letters being made
+# (you'll still get job alerts) - fill those in first.
+
+name: Mattias Matthews
+email: matti.matthews@outlook.com
+phone: "07391900447"
+location: Montpelier, Bristol BS6        # shown on the CV instead of a full address
+over_18: TODO                            # yes / no - bar jobs need 18+
+right_to_work_uk: TODO                   # yes / no
+availability: TODO                       # e.g. "Evenings and weekends, up to 20 hours a week"
+start_date: Immediately
+
+summary: >
+  Hard-working, honest and reliable, with hospitality experience as a pub
+  bartender and a restaurant food runner. A good communicator and natural
+  leader who takes pride in doing every job properly.
+
+skills:
+  - Bar service
+  - Running food
+  - Customer service
+  - Good communicator
+  - Teamwork and leadership
+  - Punctual and reliable
+  - Microsoft Word, Excel and PowerPoint
+
+experience:
+  - id: pub
+    role: Bartender
+    employer: TODO pub name
+    location: TODO town
+    dates: TODO e.g. Jun 2024 - Aug 2025
+    duties:
+      - TODO what you did, e.g. served drinks at a busy bar, used the till, changed barrels, opened and closed up
+
+  - id: restaurant
+    role: Food Runner
+    employer: TODO restaurant name
+    location: TODO town
+    dates: TODO e.g. Sep 2025 - present
+    duties:
+      - TODO what you did, e.g. ran food from the pass to tables, worked closely with the kitchen and floor team
+
+  - id: papers
+    role: Newspaper Delivery
+    employer: Weybridge News Ltd
+    location: Weybridge
+    dates: 2 years
+    duties:
+      - Delivered papers every weekend and was always punctual, as customers expected them at set times
+      - Regularly asked to cover unfamiliar rounds when others were off sick; my employer called me his "number one paper boy"
+
+  - id: barnardos
+    role: Volunteer
+    employer: Barnardo's charity shop
+    location: Walton
+    dates: 3 months
+    duties:
+      - Kept the shop floor and window displays tidy and well presented
+      - Sorted customer donations into categories and bagged up unsellable items for recycling
+
+  - id: scouts
+    role: Patrol Leader
+    employer: Scouts
+    location: ""
+    dates: 8 years
+    duties:
+      - Led younger scouts, keeping them engaged and making sure they had fun
+      - Designed and ran activities with other patrol leaders as part of a team
+
+  - id: enertor
+    role: Marketing Assistant (work experience)
+    employer: Enertor
+    location: ""
+    dates: 3 days
+    duties:
+      - Work experience with the marketing team of a multinational performance insole company
+
+education:
+  - school: Esher College
+    detail: "A levels: Maths, Economics. BTEC: Business. TODO: add your actual grades and years"
+  - school: Heathside School
+    detail: "10 GCSEs (grades 5-7) including Maths 7, English Language 7, Biology 7, Chemistry 7, Business 6"
+
+achievements:
+  - Duke of Edinburgh Award - learned to cook from a professional chef, picking up complex techniques quickly
+  - Team leader on school enterprise day - my team took first place
+
+interests:
+  - Tennis since the age of 3, once competitively and now with friends and family
+  - The gym, which keeps me fit and focused

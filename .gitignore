@@ -1,0 +1,5 @@
+# Never upload these. .env would hold your Gmail app password and API keys.
+.env
+__pycache__/
+*.pyc
+.venv/

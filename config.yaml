@@ -1,0 +1,85 @@
+# Search settings. Edit freely - the next scheduled run picks up changes.
+
+origin:
+  name: Montpelier station
+  lat: 51.4683357
+  lon: -2.5881158
+
+commute:
+  max_minutes: 20          # door-to-door Dott ride limit
+  dott_speed_kmh: 16       # realistic average for a Dott e-scooter/e-bike in Bristol traffic
+  overhead_minutes: 3      # finding a vehicle, unlocking, parking
+  # Some adverts only say "Bristol". Keep them (flagged "check location") or drop them?
+  include_unknown_location: true
+
+search:
+  postcode: BS6 5EE        # Montpelier station
+  radius_miles: 4          # coarse pre-filter for the job APIs; the commute check does the real work
+  max_age_days: 14
+  part_time_only: true
+  # A job title must match one of these (whole words, plural ok)...
+  title_include:
+    - bar
+    - bartender
+    - barback
+    - bar staff
+    - mixologist
+    - waiter
+    - waitress
+    - waiting
+    - runner
+    - food runner
+    - front of house
+    - foh
+    - floor staff
+    - server
+    - team member
+    - host
+    - hostess
+    - barista
+    - hospitality
+    - food and beverage
+    - f&b
+  # ...and none of these.
+  title_exclude:
+    - chef
+    - cook
+    - kitchen
+    - porter
+    - manager
+    - sous
+    - santa
+    - cleaner
+    - housekeeping
+    - room attendant
+    - driver
+    - delivery
+    - security
+    - engineer
+  reed_keywords:
+    - bar staff
+    - bartender
+    - food runner
+    - waiter
+    - waitress
+    - front of house
+    - barista
+  adzuna_what_or: bar bartender barback waiter waitress runner barista hospitality
+
+sources:
+  mab: true      # Mitchells & Butlers careers site (no key needed)
+  reed: true     # needs REED_API_KEY
+  adzuna: true   # needs ADZUNA_APP_ID and ADZUNA_APP_KEY
+
+limits:
+  max_new_jobs_per_run: 8
+
+tailoring:
+  model: claude-opus-5-5
+  effort: medium
+
+auto_apply:
+  # Send the tailored CV and cover letter automatically when an advert says
+  # "email your CV to ...". Needs the SMTP_* secrets (see README).
+  email: false
+  max_emails_per_run: 3
