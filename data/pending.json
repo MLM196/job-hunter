@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "employer": "Browns Bristol",
+    "hours": "part-time",
+    "location": "Browns Bristol, Bristol, BS8 1RE",
+    "pay": "Competitive Salary",
+    "ride": "~12 min",
+    "source": "mab",
+    "title": "Part Time Shift Supervisor/ Part Time Floor Staff",
+    "url": "https://www.mbcareersandjobs.com/job/part-time-shift-supervisor-part-time-floor-staff-in-browns-bristol-bristol-bs8-1re-jid-1296211"
+  },
+  {
+    "employer": "The Botanist",
+    "hours": "part-time",
+    "location": "The Botanist, Bristol, BS8 1HP",
+    "pay": "Competitive Salary",
+    "ride": "~13 min",
+    "source": "mab",
+    "title": "Part Time Team Member",
+    "url": "https://www.mbcareersandjobs.com/job/part-time-team-member-in-the-botanist-bristol-bs8-1hp-jid-1297128"
+  },
+  {
+    "employer": "Miller & Carter Bristol",
+    "hours": "part-time",
+    "location": "Miller & Carter Bristol, Bristol, BS1 5TA",
+    "pay": "Competitive Salary plus tips",
+    "ride": "~14 min",
+    "source": "mab",
+    "title": "Part Time Christmas Bar Staff",
+    "url": "https://www.mbcareersandjobs.com/job/part-time-christmas-bar-staff-in-miller-and-carter-bristol-bristol-bs1-5ta-jid-1297278"
+  },
+  {
+    "employer": "Miller & Carter Bristol",
+    "hours": "part-time",
+    "location": "Miller & Carter Bristol, Bristol, BS1 5TA",
+    "pay": "Minimum wage plus tips",
+    "ride": "~14 min",
+    "source": "mab",
+    "title": "Part Time Waiting Staff",
+    "url": "https://www.mbcareersandjobs.com/job/part-time-waiting-staff-in-miller-and-carter-bristol-bristol-bs1-5ta-jid-1275609"
+  },
+  {
+    "employer": "White Lion",
+    "hours": "part-time",
+    "location": "White Lion, Bristol, BS9 3HN",
+    "pay": "Competitive Salary",
+    "ride": "~20 min",
+    "source": "mab",
+    "title": "Part Time Team Member",
+    "url": "https://www.mbcareersandjobs.com/job/part-time-team-member-in-white-lion-bristol-bs9-3hn-jid-1296997"
+  }
+]
